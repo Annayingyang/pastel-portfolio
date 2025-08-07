@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import CreateResume from './pages/CreateResume';
+import ContentTips from './pages/ContentTips';
+import EmployerTips from './pages/EmployerTips';
+import PreviewResume from './pages/PreviewResume';
+import InterviewPrep from './pages/InterviewPrep';
+import Settings from './pages/Settings';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/create" element={<CreateResume />} />
+        <Route path="/tips/content" element={<ContentTips />} />
+        <Route path="/tips/employers" element={<EmployerTips />} />
+        <Route path="/preview" element={<PreviewResume />} />
+        <Route path="/interview-prep" element={<InterviewPrep />} />
+        <Route path="/settings" element={<Settings />} />
+      </Routes>
+    </Router>
   );
 }
 

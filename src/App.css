@@ -1,38 +1,105 @@
-.App {
+/* App.css */
+
+.zone {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  padding: 2rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.resume-scene {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, #ffe6f0, #e6f0ff);
+  overflow-x: auto;
+  white-space: nowrap;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+  box-sizing: border-box;
+  gap: 2rem;
+}
+
+.platform,
+.castle-section {
+  width: 300px;
+  min-height: 350px;
+  background: #fff0f5;
+  border: 4px solid #ffb6c1;
+  border-radius: 20px;
+  padding: 1rem;
+  display: inline-block;
+  vertical-align: bottom;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.character {
+  position: fixed;
+  bottom: 60px;
+  left: 40px;
+  font-size: 50px;
+  animation: bounce 1s infinite;
+}
+
+.bar-graph {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.bar-graph div {
+  width: 20px;
+  background: #add8e6;
+  border-radius: 5px;
+  transition: height 0.3s ease;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+
+/* Pastel Page Colors */
+.zone1 { background: #ffe6f0; } /* Home */
+.zone2 { background: #e0f7ff; } /* Create Resume / Interview Prep */
+.zone3 { background: #f9e6ff; } /* Settings / Content Tips */
+.zone4 { background: #fff0f5; } /* Employer Tips */
+.zone5 { background: #e6ffe6; } /* Preview Resume */
+
+/* Text Styling */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p {
+  max-width: 600px;
+  text-align: center;
+  line-height: 1.5;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button {
+  margin: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 12px;
+  background: #ffb6c1;
   color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:hover {
+  background: #ff9ab6;
 }
